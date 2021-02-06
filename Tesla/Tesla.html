@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Fox's Pot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app">
+        <header>
+            <nav>
+        <section>
+            <h3>Chose Your Tesla</h3>
+            <br />
+            <h3>Color</h3>
+            <input href="#" type="radio" v-model="color" v-bind:value="red" @click="switchView('red_tesla')">Red</input>
+            <br />
+            <input href="#" type="radio" v-model="color" v-bind:value="blue" @click="switchView('blue_tesla')">Blue</input>
+            <br />
+            <input href="#" type="radio" v-model="color" v-bind:value="black" @click="switchView('black_tesla')">Black</input>
+            <br />
+            <br />
+            <span>Color Price:{{color}}$</span>
+           
+        </section>
+
+        <section>
+            <h3>Wheels</h3>
+            <input href="#" type="radio" v-model="wheels" v-bind:value="tempest" @click="switchView('tempest_wheels_tesla')">Tempest Wheels</input>
+            <br />
+            <input href="#" type="radio" v-model="wheels" v-bind:value="arachnid" @click="switchView('arachnid_wheels_tesla')">Arachnid Wheels</input>
+            <br />
+            <br />              
+            <span>Wheels Price:{{wheels}}$</span> 
+            <br />
+            <br />
+            <span>Total: {{total}} $</span>
+        </section>
+    </nav>
+    </header>
+
+    <component :is="currentView" transition="switch"></component>
+
+    </div>
+
+    <template id="red_tesla_template">
+        <img class="red_tesla" src="pic/red.jpg" alt="">
+    </template>
+
+    <template id="blue_tesla_template">
+        <img class="blue_tesla" src="pic/blue.jpg" alt="">
+    </template>
+
+    <template id="black_tesla_template">
+        <img class="black_tesla" src="pic/black.jpg" alt="">
+    </template>
+
+    <template id="tempest_wheels_tesla_template">
+        <img class="tempest_wheels_tesla" src="pic/white.jpg" alt="">
+    </template>
+
+    <template id="arachnid_wheels_tesla_template">
+        <img class="arachnid_wheels_tesla" src="pic/grey.jpg" alt="">
+    </template>
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>

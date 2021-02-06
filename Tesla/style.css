@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+}
+
+nav {
+    list-style:none;
+    margin:100px;
+    padding:0;
+    text-align:right;
+}
+
+nav input {
+    display: inline-block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color:  #8a8d96;
+    font-weight: 400;
+}
+
+nav input:hover {
+    color: #272727;
+}
+
+/* pic */
+.red_tesla, 
+.blue_tesla, 
+.black_tesla,
+.tempest_wheels_tesla,
+.arachnid_wheels_tesla {
+    position: absolute;
+    top: 120px;
+    
+}
+
+.red_tesla {
+    width: 1380px;
+    height: 720px;
+}
+
+.blue_tesla {
+    width: 1380px;
+    height: 720px; 
+}
+
+.black_tesla {
+    width: 1380px;
+    height: 720px;
+}
+    
+
+
+.tempest_wheels_tesla {
+    width: 1380px;
+    height: 720px;
+    
+    
+}
+
+.arachnid_wheels_tesla {
+    width: 1380px;
+    height: 720px;
+    
+    
+    
+}
+
+
+
+.switch-transition {
+    transition: all .5s ease-in-out;
+}
+
+.switch-enter {
+    left: 100%;
+}
+
+.switch-leave {
+    left: -100%;
+}
